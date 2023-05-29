@@ -1,29 +1,11 @@
-/*$(document).ready(function() {
-    $('.gallery').mauGallery({
-        columns: {
-            xs: 1,
-            sm: 2,
-            md: 3,
-            lg: 3,
-            xl: 3
-        },
-        lightBox: true,
-        lightboxId: 'myAwesomeLightbox',
-        showTags: true,
-        tagsPosition: 'top'
-    });
-});*/
+
 const Categorie = document.getElementById("categories");
 const pickture = document.getElementById("picktur")
 let categories = ["Tous","Concert","Entreprises","Mariages","Portrait"];
-let Concert = ["./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp","./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplas.webp"]
-let Entreprises = ["./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unspl.webp","./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unspla.webp","./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY.webp"]
-let Mariages = ["./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.webp","./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"]
-let Portrait =["./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp","./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.webp"]
-let mama = ["./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp",
-            "1"]
 let picktures = ["1","./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp","1","./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplas.webp","2","./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unspl.webp","2","./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unspla.webp","2","./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY.webp"
                 ,"3","./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.webp","3","./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp","4","./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp","4","./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.webp"]
+let alts = ["1","consert","1","un chanteur en concerts","2","homme en costume","2","femme heureuse","2","femme devant un ordi"
+,"3","deux paire de mains","3","mariage","4","portrait d'un homme","4","portrait d'une femme"]
 console.log(picktures);
 button_categories()
 function button_categories(){
@@ -58,6 +40,7 @@ function addListener(){// function pour afficher les images avec la bonne catego
                             //console.log(number);
                             let display = document.createElement('img')
                             display.src = picktures[number]
+                            display.alt = alts[number]
                             display.className = "gallery-item"
                             pickture.appendChild(display)
                             number++;  
@@ -83,6 +66,7 @@ function addListener(){// function pour afficher les images avec la bonne catego
             else{
             let display = document.createElement('img')
             display.src = picktures[number]
+            display.alt = alts[number]
             display.className = "gallery-item"
             pickture.appendChild(display)}
             number++
