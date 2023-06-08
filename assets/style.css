@@ -22,3 +22,61 @@ nav i {
 .quote__author{
     font-size: 25px;
 }
+#container{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#carrousel{  
+    width: 100%;  
+    height: 900px;
+    
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.photo{
+    width: 2000px;
+    height: 900px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-size:cover;
+}
+.bouton{
+    position: absolute;
+    width: 40px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #ffffff8a;
+    cursor: pointer;
+    top: 450px;
+}
+#g{
+    left: 0;
+    opacity: 1.2;
+    transform: rotate(270deg);
+    transition: all 0.3s ease;
+}
+#d{
+    color: grey;
+    right: 0;
+    opacity: 1;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+}
+#g:hover{
+    transform: rotate(270deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+#d:hover{
+    transform: rotate(90deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
